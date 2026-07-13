@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "com.seenpaid/seenpaid",
+  "description": "Schedule social posts to 25+ platforms and see which posts actually made money — revenue attribution via Stripe. Ask 'which of my posts made money?' and get real dollar amounts.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/justinasrolando-cpu/seenpaid-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://seenpaid.com",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://go.seenpaid.com/mcp"
+    }
+  ]
+}
