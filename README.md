@@ -3,8 +3,8 @@
 Connect your AI agent to **[seenpaid](https://seenpaid.com)** and ask the question every poster
 actually cares about: **"which of my posts made money?"**
 
-seenpaid schedules social posts to 25+ platforms (X, LinkedIn, Instagram, Facebook, TikTok,
-Bluesky, and more) and attributes **real revenue** — via Stripe — back to the individual post that
+seenpaid schedules social posts to 21 platforms (X, LinkedIn, Bluesky, Threads, TikTok,
+Mastodon, Discord, and more) and attributes **real revenue** — via Stripe — back to the individual post that
 drove each sale. This repo is the open client + docs for that hosted service.
 
 > **Open client to a paid service.** seenpaid's cloud (the revenue-matching engine + dashboard) is
@@ -14,13 +14,18 @@ drove each sale. This repo is the open client + docs for that hosted service.
 
 ## Tools
 
-| tool | description |
-|------|-------------|
-| `list_accounts` | List connected social accounts (platform, handle, id, status). |
-| `list_posts` | List recent posts with status, schedule time, and target platforms. |
-| `schedule_post` | Schedule or immediately publish a post to one or more platforms. |
-| `get_analytics` | Revenue attribution — clicks, sales, revenue, with per-platform / country / device breakdowns (7, 30, or 90 days). |
-| `get_top_posts` | Your posts ranked by revenue earned — "which post made the most money." |
+50 tools: post, schedule, validate a caption, read what is queued, and see which posts made money.
+The full list is in [`skills/seenpaid/references/tools.md`](./skills/seenpaid/references/tools.md).
+
+## Agent Skill
+
+[`skills/seenpaid`](./skills/seenpaid/SKILL.md) is an [Agent Skill](https://agentskills.io) that tells an
+agent how to use these tools safely (always name the platforms, confirm before publishing, read back
+what was queued). Install it with:
+
+```bash
+npx skills add justinasrolando-cpu/seenpaid-mcp
+```
 
 ## Setup
 
