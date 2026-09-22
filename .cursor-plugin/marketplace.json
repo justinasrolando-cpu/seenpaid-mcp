@@ -1,0 +1,50 @@
+{
+  "name": "seenpaid",
+  "owner": {
+    "name": "seenpaid",
+    "email": "support@seenpaid.com"
+  },
+  "metadata": {
+    "description": "seenpaid social media scheduling for AI agents — schedule and publish posts across 21 platforms, then see which ones made money"
+  },
+  "plugins": [
+    {
+      "name": "seenpaid",
+      "source": "./",
+      "version": "1.1.0",
+      "description": "Schedule and publish social posts to 21 platforms (X, LinkedIn, Bluesky, Threads, TikTok, Mastodon, Discord, Telegram, Pinterest, Tumblr, Slack, WordPress, Ghost, Dev.to, Hashnode, Medium, Lemmy, Nostr and more) through seenpaid's hosted MCP server — 50 tools to connect, validate, schedule and read back your queue, plus revenue attribution: which posts actually made money, matched to the user's own Stripe.",
+      "author": {
+        "name": "seenpaid",
+        "email": "support@seenpaid.com"
+      },
+      "homepage": "https://seenpaid.com",
+      "repository": "https://github.com/justinasrolando-cpu/seenpaid-mcp",
+      "license": "MIT",
+      "logo": "assets/logo.png",
+      "category": "productivity",
+      "tags": [
+        "social-media",
+        "scheduling",
+        "marketing",
+        "automation",
+        "ai-agent",
+        "revenue-attribution"
+      ],
+      "keywords": [
+        "seenpaid",
+        "social-media",
+        "scheduling",
+        "automation",
+        "ai-agent",
+        "revenue-attribution",
+        "x",
+        "linkedin",
+        "bluesky",
+        "tiktok",
+        "instagram",
+        "threads"
+      ],
+      "skills": ["./skills/seenpaid"]
+    }
+  ]
+}

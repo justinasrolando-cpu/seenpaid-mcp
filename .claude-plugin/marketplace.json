@@ -1,0 +1,29 @@
+{
+  "name": "seenpaid",
+  "owner": {
+    "name": "seenpaid",
+    "email": "support@seenpaid.com",
+    "url": "https://seenpaid.com"
+  },
+  "metadata": {
+    "description": "seenpaid social media scheduler skill and hosted MCP server — schedule posts to 21 platforms and see which ones made money",
+    "version": "1.1.0"
+  },
+  "plugins": [
+    {
+      "name": "seenpaid",
+      "source": "./",
+      "description": "Schedule and publish social posts to 21 platforms through seenpaid's hosted MCP server — 50 tools to connect, validate, schedule and read back your queue, plus revenue attribution: which posts actually made money, matched to the user's own Stripe.",
+      "version": "1.1.0",
+      "author": {
+        "name": "seenpaid",
+        "email": "support@seenpaid.com",
+        "url": "https://seenpaid.com"
+      },
+      "homepage": "https://seenpaid.com/agent",
+      "repository": "https://github.com/justinasrolando-cpu/seenpaid-mcp",
+      "license": "MIT",
+      "skills": ["./skills/seenpaid"]
+    }
+  ]
+}

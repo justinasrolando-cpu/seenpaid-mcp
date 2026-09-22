@@ -11,7 +11,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://go.seenpaid.com/mcp"
+      "url": "https://api.seenpaid.com/mcp"
     }
   ]
 }

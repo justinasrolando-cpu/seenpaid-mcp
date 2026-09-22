@@ -16,41 +16,78 @@ drove each sale. This repo is the open client + docs for that hosted service.
 
 50 tools: post, schedule, validate a caption, read what is queued, and see which posts made money.
 The full list is in [`skills/seenpaid/references/tools.md`](./skills/seenpaid/references/tools.md).
+Four walk-through examples (schedule to X + LinkedIn, plan a week with `bulk_schedule`, "which posts
+made money", and connecting an account) are in [`examples/`](./examples/).
 
 ## Agent Skill
 
 [`skills/seenpaid`](./skills/seenpaid/SKILL.md) is an [Agent Skill](https://agentskills.io) that tells an
 agent how to use these tools safely (always name the platforms, confirm before publishing, read back
-what was queued). Install it with:
+what was queued).
+
+This repo is also packaged as a **plugin** — the skill and the hosted MCP server together — for Claude
+Code, the Claude apps, Cursor, and Grok, plus a Gemini CLI extension. Pick whichever install path matches
+your client.
+
+## Install
+
+### Claude Code
+
+```bash
+/plugin marketplace add justinasrolando-cpu/seenpaid-mcp
+/plugin install seenpaid@seenpaid
+```
+
+This installs the [`skills/seenpaid`](./skills/seenpaid/SKILL.md) skill and connects the hosted MCP
+server (declared in [`.mcp.json`](./.mcp.json)) in one step. The server supports OAuth, so the first
+tool call opens a browser to sign in to seenpaid — no key to paste.
+
+### Claude apps (claude.ai / Claude Desktop) — custom connector
+
+Settings → Connectors → Add custom connector → URL `https://api.seenpaid.com/mcp` → sign in when
+prompted (OAuth). See [`examples/claude_desktop_config.json`](./examples/claude_desktop_config.json)
+for the config-file form (Claude Desktop, or any MCP-config client) using a static `sp_…` API key
+instead.
+
+### Cursor
+
+Point Cursor at [`.cursor-plugin/`](./.cursor-plugin) (`plugin.json` + `marketplace.json` +
+`mcp.json`) — same shape as `.claude-plugin/`. Or add the server directly in Cursor Settings → MCP
+with the URL and header from `examples/claude_desktop_config.json` if you're using a static `sp_…`
+key instead of OAuth.
+
+### Grok
+
+Point Grok at [`.grok-plugin/`](./.grok-plugin) — same three files, Grok's marketplace shape.
+
+### Gemini CLI
+
+```bash
+gemini extensions install https://github.com/justinasrolando-cpu/seenpaid-mcp.git
+```
+
+Uses [`gemini-extension.json`](./gemini-extension.json) at the repo root, which bundles the skill and
+the hosted MCP server (OAuth on first connection).
+
+### `npx skills add` (skill only, any client that reads Agent Skills)
 
 ```bash
 npx skills add justinasrolando-cpu/seenpaid-mcp
 ```
 
+Installs just [`skills/seenpaid`](./skills/seenpaid/SKILL.md) — pair it with a manual MCP server
+connection (see above) if your client doesn't read `.mcp.json`.
+
 ## Setup
 
 1. Sign up at **[seenpaid.com](https://seenpaid.com)**, open **AI Agents**, and create an API key
-   (starts with `sp_`).
-2. Add the remote MCP server to your client (Claude Desktop, Cursor, Cline, etc.):
-
-```json
-{
-  "mcpServers": {
-    "seenpaid": {
-      "url": "https://go.seenpaid.com/mcp",
-      "headers": { "Authorization": "Bearer sp_YOUR_KEY" }
-    }
-  }
-}
-```
-
+   (starts with `sp_`) if your client needs one (config-file clients; UI clients use OAuth instead).
+2. Connect the remote MCP server with whichever install path above matches your client.
 3. Ask your agent:
 
 > "Which of my posts made the most money last month?"
 > "Schedule this to X and LinkedIn for 9am tomorrow."
 > "How much revenue did my posts drive in the last 30 days?"
-
-See [`examples/claude_desktop_config.json`](./examples/claude_desktop_config.json) for a full config.
 
 ## How attribution works
 
@@ -62,7 +99,7 @@ published a tracked post yet.
 ## Links
 
 - Website & sign-up: https://seenpaid.com
-- MCP endpoint: `https://go.seenpaid.com/mcp`
+- MCP endpoint: `https://api.seenpaid.com/mcp`
 
 ## License
 

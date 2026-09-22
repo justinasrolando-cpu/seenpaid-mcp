@@ -1,0 +1,26 @@
+{
+  "name": "seenpaid",
+  "description": "seenpaid social media scheduling for AI agents — schedule and publish posts across 21 platforms, then see which ones made money",
+  "owner": {
+    "name": "seenpaid",
+    "email": "support@seenpaid.com"
+  },
+  "plugins": [
+    {
+      "name": "seenpaid",
+      "description": "seenpaid social media scheduling. Schedule and publish posts across 21 platforms including X, LinkedIn, Bluesky, TikTok, Instagram and Threads, then see which posts actually made money via the user's own Stripe.",
+      "category": "productivity",
+      "source": { "type": "local", "path": "./" },
+      "homepage": "https://seenpaid.com",
+      "keywords": [
+        "seenpaid",
+        "social media scheduler",
+        "social media agentic scheduler",
+        "schedule social media posts",
+        "social media automation",
+        "revenue attribution"
+      ],
+      "domains": ["seenpaid.com"]
+    }
+  ]
+}

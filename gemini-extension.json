@@ -1,0 +1,11 @@
+{
+  "name": "seenpaid",
+  "version": "1.1.0",
+  "description": "seenpaid social media scheduling: schedule, validate and publish posts, manage connected channels, upload media, and read revenue attribution (which posts made money via Stripe) across 21 platforms including X, LinkedIn, Bluesky, Threads, TikTok, Mastodon, Discord and more. Bundles the seenpaid skill and the hosted seenpaid MCP server.",
+  "mcpServers": {
+    "seenpaid": {
+      "httpUrl": "https://api.seenpaid.com/mcp",
+      "description": "Hosted seenpaid MCP server (streamable HTTP). Authorizes via OAuth on first connection: Gemini CLI opens a browser to sign in to seenpaid; no token or local install required. A static sp_… API key also works for config-file setups."
+    }
+  }
+}

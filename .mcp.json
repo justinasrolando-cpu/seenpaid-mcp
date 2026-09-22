@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "seenpaid": {
+      "type": "http",
+      "url": "https://api.seenpaid.com/mcp"
+    }
+  }
+}

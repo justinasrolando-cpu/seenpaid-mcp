@@ -1,0 +1,30 @@
+{
+  "name": "seenpaid",
+  "version": "1.1.0",
+  "description": "seenpaid social media scheduling. Schedule and publish posts across 21 platforms including X, LinkedIn, Bluesky, TikTok, Instagram and Threads, then see which posts actually made money via the user's own Stripe.",
+  "author": {
+    "name": "seenpaid",
+    "email": "support@seenpaid.com",
+    "url": "https://seenpaid.com"
+  },
+  "homepage": "https://seenpaid.com",
+  "repository": "https://github.com/justinasrolando-cpu/seenpaid-mcp",
+  "license": "MIT",
+  "logo": "assets/logo.png",
+  "keywords": [
+    "seenpaid",
+    "social media scheduler",
+    "social media agentic scheduler",
+    "schedule social media posts",
+    "social media automation",
+    "revenue attribution"
+  ],
+  "skills": ["./skills/seenpaid"],
+  "mcpServers": {
+    "seenpaid": {
+      "type": "http",
+      "url": "https://api.seenpaid.com/mcp",
+      "note": "Hosted seenpaid MCP server (streamable HTTP). Authorizes via OAuth on first connection, or a static sp_… API key sent as an Authorization: Bearer header for config-file clients. Lets the agent schedule social posts and read revenue attribution."
+    }
+  }
+}
