@@ -1,16 +1,17 @@
 # seenpaid — MCP server
 
-Connect your AI agent to **[seenpaid](https://seenpaid.com)** and ask the question every poster
-actually cares about: **"which of my posts made money?"**
+**seenpaid is an agentic social media scheduler.** Connect Claude, ChatGPT, Cursor or any MCP
+client and your agent can schedule and publish to 21 platforms (X, LinkedIn, Bluesky, Threads,
+TikTok, Mastodon, Discord and more), check each caption against every platform's rules, and read
+back what is queued. It is listed in ChatGPT's plugin directory (approved 24 September 2026).
 
-seenpaid schedules social posts to 21 platforms (X, LinkedIn, Bluesky, Threads, TikTok,
-Mastodon, Discord, and more) and attributes **real revenue** — via Stripe — back to the individual post that
-drove each sale. This repo is the open client + docs for that hosted service.
+Optionally, connect your own Stripe (read-only) and seenpaid matches sales back to the post that
+drove them, so your agent can answer **"which of my posts made money?"**
 
-> **Open client to a paid service.** seenpaid's cloud (the revenue-matching engine + dashboard) is
+> **Open client to a paid service.** seenpaid's cloud (scheduler, revenue matching, dashboard) is
 > proprietary. This repo is the connector, the [`server.json`](./server.json) registry manifest, and
-> a [Claude Skill](./skills/seenpaid/SKILL.md) so agents can use it. Free trial at
-> [seenpaid.com](https://seenpaid.com).
+> a [Claude Skill](./skills/seenpaid/SKILL.md) so agents can use it. 7-day trial at
+> [seenpaid.com](https://seenpaid.com) (card required, no free plan).
 
 ## Tools
 
