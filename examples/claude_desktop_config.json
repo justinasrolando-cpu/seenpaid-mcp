@@ -2,10 +2,7 @@
   "mcpServers": {
     "seenpaid": {
       "type": "http",
-      "url": "https://api.seenpaid.com/mcp",
-      "headers": {
-        "Authorization": "Bearer sp_YOUR_KEY_HERE"
-      }
+      "url": "https://api.seenpaid.com/mcp"
     }
   }
 }

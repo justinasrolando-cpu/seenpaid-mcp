@@ -64,14 +64,16 @@ The server is `https://api.seenpaid.com/mcp` (streamable HTTP).
 
 - **Claude / ChatGPT / Cursor (UI):** add it as a custom connector and sign in
   when asked (OAuth). No key to paste.
-- **Config-file clients (Claude Code, Codex, Gemini CLI…):** create a key in
-  seenpaid → Settings → API (it starts with `sp_`) and send it as
-  `Authorization: Bearer sp_…`. For Claude Code:
+- **Claude Code:** add it, then sign in with OAuth. No key to paste:
 
   ```bash
-  claude mcp add --transport http seenpaid https://api.seenpaid.com/mcp \
-    --header "Authorization: Bearer $SEENPAID_API_KEY"
+  claude mcp add --transport http seenpaid https://api.seenpaid.com/mcp
   ```
+
+  Then run `/mcp`, pick seenpaid and sign in in the browser.
+- **Clients that cannot do OAuth:** the user creates a key in seenpaid →
+  Settings → API (it starts with `sp_`) and pastes it into that client's own
+  connection settings. Never ask the user to paste the key into the chat.
 
 Connecting a new social network needs a human in a browser. If the user has
 nothing connected, call `get_connect_url` and hand them the link — you cannot

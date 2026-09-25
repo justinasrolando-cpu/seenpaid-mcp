@@ -1,6 +1,6 @@
 {
   "name": "seenpaid",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Schedule and publish social posts to 21 platforms (X, LinkedIn, Bluesky, Threads, TikTok, Mastodon, Discord, Telegram, Pinterest, Tumblr, Slack, WordPress, Ghost, Dev.to, Hashnode, Medium, Lemmy, Nostr and more) through seenpaid's hosted MCP server — 50 tools to connect, validate, schedule and read back your queue, plus the half no other scheduler has: which posts actually made money, matched to the user's own Stripe.",
   "author": {
     "name": "seenpaid",
@@ -8,7 +8,7 @@
     "url": "https://seenpaid.com"
   },
   "homepage": "https://seenpaid.com/agent",
-  "repository": "https://github.com/justinasrolando-cpu/seenpaid-mcp",
+  "repository": "https://github.com/seenpaid/seenpaid-mcp",
   "license": "MIT",
   "skills": "./skills/",
   "keywords": [
@@ -41,5 +41,6 @@
     "nostr",
     "instagram",
     "facebook"
-  ]
+  ],
+  "privacyPolicyUrl": "https://seenpaid.com/privacy"
 }
